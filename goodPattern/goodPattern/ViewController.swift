@@ -17,8 +17,12 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let width = 200
+        let height = 200
+        let cx = Int(self.view.bounds.width / 2) - width / 2
+        let cy = 40
 //       declare the location of the circlepath using CGRect
-        let rect = CGRect(x: 20, y: 40, width: 200, height: 200)
+        let rect = CGRect(x: cx, y: cy, width: width, height: height)
         cp = CirclePath(frame: rect)
         view.addSubview(cp)
     }
