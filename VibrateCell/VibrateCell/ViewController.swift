@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  TextFieldEffect
+//  VibrateCell
 //
-//  Created by Sky Xu on 11/7/17.
+//  Created by Sky Xu on 11/8/17.
 //  Copyright © 2017 Sky Xu. All rights reserved.
 //
 
@@ -10,10 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var username: UITextField!
-    
-//    @IBAction func logginTapped(_ sender: UIButton) {
-//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

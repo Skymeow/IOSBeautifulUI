@@ -17,28 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PvJ-gI-QnD">
-                                <rect key="frame" x="20" y="168" width="335" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PvJ-gI-QnD" customClass="AkiraTextField" customModule="TextFieldEffect" customModuleProvider="target">
+                                <rect key="frame" x="20" y="70" width="335" height="58"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.44705882349999998" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="1" green="0.44705882349999998" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-qC-qEF">
-                                <rect key="frame" x="120" y="335" width="135" height="30"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="logginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxR-Ti-DAU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hqG-qC-qEF" secondAttribute="trailing" constant="120" id="JsX-FZ-IIH"/>
-                            <constraint firstItem="hqG-qC-qEF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="R85-6z-wt1"/>
-                            <constraint firstItem="hqG-qC-qEF" firstAttribute="top" secondItem="PvJ-gI-QnD" secondAttribute="bottom" constant="137" id="f7h-mS-bKJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PvJ-gI-QnD" secondAttribute="trailing" constant="20" id="fNI-Od-q4T"/>
-                            <constraint firstItem="PvJ-gI-QnD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="fPu-wd-5lH"/>
-                            <constraint firstItem="PvJ-gI-QnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gtc-XO-zlX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PvJ-gI-QnD" secondAttribute="bottom" constant="539" id="RQa-0v-vi6"/>
+                            <constraint firstItem="PvJ-gI-QnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U9y-vI-ikg"/>
+                            <constraint firstItem="PvJ-gI-QnD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jGY-eg-nMQ"/>
+                            <constraint firstItem="PvJ-gI-QnD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="vvd-zf-OJk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
