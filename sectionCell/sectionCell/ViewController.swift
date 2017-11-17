@@ -67,10 +67,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = UIColor.red
 //        downcast our view to be headerView which is part of tableViewHeaderFooterView
-        let headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        headerView.textLabel?.textColor = UIColor.white
+//        let headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+//        headerView.textLabel?.textColor = UIColor.white
+
     }
     
+    /**
+     customize the headerview's background color, backgroundImgView and label
+     */
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.red
+        let image = UIImage(named: "good")
+        let imgView = UIImageView(frame:CGRect(x: 3, y: 0, width: tableView.sectionHeaderHeight, height: tableView.sectionHeaderHeight))
+        imgView.image = image
+        imgView.contentMode = .scaleAspectFill
+        view.addSubview(imgView)
+        return view
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
