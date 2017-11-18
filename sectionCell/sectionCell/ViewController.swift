@@ -27,20 +27,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     /**
-     set the name of sections
-     */
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "good"
-        case 1:
-            return "bad"
-        default:
-            return nil
-        }
-    }
-    
-    /**
      set the height of header
     */
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -62,27 +48,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     /**
-    customize the headerview's background color and label
-    */
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = UIColor.red
-//        downcast our view to be headerView which is part of tableViewHeaderFooterView
-//        let headerView: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-//        headerView.textLabel?.textColor = UIColor.white
-
-    }
-    
-    /**
      customize the headerview's background color, backgroundImgView and label
      */
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = UIColor.red
         let image = UIImage(named: "good")
-        let imgView = UIImageView(frame:CGRect(x: 3, y: 0, width: tableView.sectionHeaderHeight, height: tableView.sectionHeaderHeight))
+        let imgView = UIImageView(frame:CGRect(x: 3, y: 3, width: tableView.sectionHeaderHeight, height: tableView.sectionHeaderHeight))
         imgView.image = image
         imgView.contentMode = .scaleAspectFill
         view.addSubview(imgView)
+        var label = UILabel(frame: CGRect(x: 10 + tableView.sectionHeaderHeight, y: 3, width: 40, height: tableView.sectionHeaderHeight))
+        label.textColor = UIColor.white
+        if section == 0 {
+            label.text = "good"
+            view.backgroundColor = UIColor(red:0.40, green:0.84, blue:0.59, alpha:1.0)
+        } else {
+            label.text = "Bad"
+            view.backgroundColor = UIColor(red:0.94, green:0.22, blue:0.22, alpha:1.0)
+        }
+        view.addSubview(label)
+        
         return view
     }
     
