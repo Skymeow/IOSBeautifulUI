@@ -54,7 +54,7 @@ class CirclePath: UIView {
         shapeLayer.lineWidth = 10
         shapeLayer.strokeColor = UIColor.black.cgColor
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeEnd = CGFloat(value)
+//        shapeLayer.strokeEnd = CGFloat(value)
 //       line dash with 4 pint of line, 2 p of gap
         shapeLayer.lineDashPattern = [4, 2]
 //        need to declare mask after draw the path so it would fill gradient with path
